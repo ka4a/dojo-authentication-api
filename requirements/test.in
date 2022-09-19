@@ -1,0 +1,15 @@
+-c constraints.txt
+-r base.txt
+
+pycodestyle
+pylint
+pytest
+pytest-cov
+pytest-django
+pytest-stub
+pytest-mock
+mock
+edx-lint
+black
+pre-commit
+drf-yasg

@@ -1,0 +1,20 @@
+---
+repos:
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types:
+          - python
+        args:
+          - "--load-plugins=edx_lint.pylint"
+          - "--django-settings-module=dojo_authentication.settings.test"
+          - "dojo_authentication"
+
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+        exclude: migrations
